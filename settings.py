@@ -1,14 +1,17 @@
 # STATIC files
 STATICFILES_DIRS = [
     # BASE_DIR / 'static',
-    os.path.join(BASE_DIR, 'static')
-]
-STATIC_URL = 'static/'
+    os.path.join(BASE_DIR, 'static') 
+    
+]  # staticfiles_dirs --> is the list of folders where Django will search for additional static files aside from the static folder of each app installed.(development)
+STATIC_URL = 'static/'  # --> the url that uses in terminal 
+
+STATIC_ROOT = os.path.join(BASE_DIR, "static/")  # -->  is the folder where static files will be stored after using manage.py collectstatic (for deployment)
 # =======================================================================================================================
 
 # MEDIA files 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media') # -->  is the folder where files uploaded using FileField will go.
+MEDIA_URL = '/media/' # --> The MEDIA_URL is the URL that makes the  media accessible over HTTP.
 # =======================================================================================================================
 
 # AUTH
