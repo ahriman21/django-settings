@@ -9,6 +9,9 @@ CACHES = {
     }
 }
 
+STATIC_ROOT = os.path.join(BASE_DIR, "static/")  # -->  is the folder where static files will be stored after using manage.py collectstatic (for deployment)
+
+
 # EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 # EMAIL_HOST = 'smtp.mailgun.org'
 # EMAIL_PORT = 587
